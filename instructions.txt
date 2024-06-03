@@ -1,0 +1,68 @@
+Explanation of the Solution Approach
+
+Reading Input URLs:
+Load the URLs from an Excel file (Input.xlsx) using a data manipulation library like pandas.
+
+Scraping Article Content:
+For each URL, make an HTTP request to fetch the webpage content using a library like requests.
+Parse the HTML content using a library like BeautifulSoup.
+Extract only the relevant parts: the article title and body text.
+
+Saving Articles:
+Save the extracted title and article text to individual text files.
+Name each file according to a unique identifier (URL_ID) provided in the Excel file.
+How to Run the .py File to Generate Output
+
+Install Required Libraries:
+
+Ensure that pandas, beautifulsoup4, and requests libraries are installed by running:
+bash
+Copy code
+pip install pandas beautifulsoup4 requests
+Download NLTK Resources:
+
+If the script uses NLTK resources for text analysis, download them by running:
+
+(import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+Run the Script:)
+
+Save the Python script as extract_text.py.
+
+Open a terminal or command prompt and navigate to the directory where the script is saved.
+Run the script by executing:
+
+python extract_text.py
+Dependencies Required
+pandas: For reading and writing Excel files, managing data frames.
+beautifulsoup4: For web scraping and parsing HTML content.
+requests: For making HTTP requests to fetch webpage content.
+nltk: For natural language processing tasks (if used in the script).
+Instructions Summary
+Install Libraries:
+
+Run the following command to install necessary Python libraries:
+
+(pip install pandas beautifulsoup4 requests)
+
+Download NLTK Data:
+
+If natural language processing is needed, download necessary NLTK resources by running:
+
+(import nltk
+nltk.download('punkt')
+nltk.download('stopwords'))
+
+Run the Script:
+
+Save the script as extract_text.py.
+Open a terminal or command prompt, navigate to the script's directory, and execute:
+
+(python extract_text.py)
+
+Output:
+
+The script will create a directory named TitleText.
+Inside this directory, each article's title and text will be saved in separate text files.
+Each file will be named according to the URL_ID from the Excel file, ensuring that each article is easily identifiable.
